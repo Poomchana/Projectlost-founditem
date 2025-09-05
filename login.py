@@ -1,3 +1,11 @@
+# กำหนดข้อมูลผู้ใช้ไว้ล่วงหน้า
+users = {
+    "admin": "1234",
+    "user1": "abcd",
+    "test": "pass123"
+}
+
+# ฟังก์ชันสำหรับเข้าสู่ระบบ
 def login(max_attempts=3):
     print("=== ระบบเข้าสู่ระบบ (พยายามได้สูงสุด 3 ครั้ง) ===")
     for attempt in range(max_attempts):
