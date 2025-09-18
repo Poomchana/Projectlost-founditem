@@ -1,0 +1,66 @@
+/* Reset พื้นฐาน */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  background-color: #f5f5f5;
+}
+
+/* แถบหัวเว็บ */
+.header-bar {
+  background-color: #3b7197;
+  color: #fff;
+  padding: 20px;
+  text-align: left;
+}
+
+/* ปุ่มกลับหน้าแรก */
+.back-btn-box {
+  margin: 15px 20px;
+}
+.back-btn {
+  background-color: #c82333;
+  color: #fff;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.2s;
+}
+.back-btn:hover {
+  background-color: #a71d2a;
+}
+
+/* กล่องตาราง */
+.table-container {
+  max-width: 900px;
+  margin: 0 auto 40px;
+  background: #fff;
+  padding: 15px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.1);
+  overflow-x: auto; /* ให้ responsive ในมือถือ */
+}
+
+/* ตาราง Lost & Found */
+.lost-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+.lost-table th,
+.lost-table td {
+  border: 1px solid #000;
+  padding: 10px;
+}
+.lost-table th {
+  background-color: #e9ecef;
+}
+
+/* Responsive: ลดขนาดในจอเล็ก */
+@media (max-width: 600px) {
+  .lost-table th,
+  .lost-table td {
+    font-size: 14px;
+    padding: 6px;
+  }
+}
