@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lost & Found</title>
+  <link rel="stylesheet" href="notify.css">
+</head>
+<body>
+
+  <!-- แถบหัวเว็บ -->
+  <header class="header-bar">
+    <h1>Lost & Found</h1>
+  </header>
+
+  <!-- ปุ่มกลับหน้าแรก -->
+  <div class="back-btn-box">
+    <button class="back-btn" onclick="goHome()">← กลับหน้าแรก</button>
+  </div>
+
+  <!-- ตารางว่าง -->
+  <div class="table-container">
+    <table class="lost-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>วันที่แจ้ง</th>
+          <th>รายละเอียดของหาย</th>
+          <th>สถานะ</th>
+        </tr>
+      </thead>
+      <tbody id="lost-data">
+        <!-- ไม่มีข้อมูลเริ่มต้น -->
+      </tbody>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
