@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>แบบฟอร์มเจอของหาย</title>
+  <link rel="stylesheet" href="found-item-form.css">
+</head>
+<body>
+
+<!-- ===== ฟอร์มเจอของหาย ===== -->
+<div id="found-form" class="page">
+  <div class="form-container">
+
+    <!-- ปุ่มกลับหน้าหลัก -->
+    <button class="back-btn" onclick="showPage('homepage')">
+      ← กลับหน้าหลัก
+    </button>
+
+    <div class="form-content">
+      <h2 class="form-title">แบบฟอร์มเจอของหาย</h2>
+
+      <form class="item-form" onsubmit="event.preventDefault(); showModal();">
+        <div class="form-group">
+          <label>ชื่อ</label>
+          <input type="text" name="name" required>
+        </div>
+
+        <div class="form-group">
+          <label>สิ่งของที่พบ</label>
+          <div class="input-with-file">
+            <input type="text" name="item" placeholder="ระบุสิ่งของ" required>
+            <!-- ปุ่มเลือกไฟล์จริง -->
+            <label class="file-upload">
+              ไฟล์รูป
+              <input type="file" name="itemImage" accept="image/*" hidden>
+            </label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>รายละเอียดสิ่งของ</label>
+          <input type="text" name="detail" required>
+        </div>
+
+        <div class="form-group">
+          <label>สถานที่ที่พบ</label>
+          <input type="text" name="location" required>
+        </div>
+
+        <div class="form-group">
+          <label>เวลา (ประมาณ)</label>
+          <input type="text" name="time" required>
+        </div>
+
+        <div class="form-group">
+          <label>ช่องทางการติดต่อ</label>
+          <input type="text" name="contact" required>
+        </div>
+
+        <button type="submit" class="btn-primary">บันทึก</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Modal แจ้งบันทึกสำเร็จ ===== -->
+<div id="success-modal" class="modal">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeModal()">&times;</button>
+    <div class="success-icon">
+      <svg width="80" height="80" viewBox="0 0 94 94" fill="none">
+        <path d="M33 47L42 56L61 37" stroke="#43A047" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="47" cy="47" r="45" stroke="#43A047" stroke-width="4"/>
+      </svg>
+    </div>
+    <h3>บันทึกแบบฟอร์มสำเร็จ !</h3>
+    <button class="btn-primary" onclick="showPage('homepage')">กลับสู่หน้าหลัก</button>
+  </div>
+</div>
+
+<script>
+  function showModal() {
+    document.getElementById('success-modal').style.display = 'block';
+  }
+  function closeModal() {
+    document.getElementById('success-modal').style.display = 'none';
+  }
+</script>
+
+<script src="found-item-form.js"></script>
+</body>
+</html>
