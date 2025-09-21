@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>สมัครสมาชิก</title>
+  <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+
+  <div id="register" class="page">
+    <div class="auth-container">
+
+      <!-- ปุ่มกลับหน้าหลัก -->
+      <button class="back-btn" onclick="showPage('homepage')">
+        ← กลับหน้าหลัก
+      </button>
+
+      <div class="auth-form register-form">
+        <h2 class="auth-title">สมัครสมาชิก</h2>
+
+        <div class="form-columns">
+          <div class="form-column">
+            <form id="signup-form">
+              <div class="form-group">
+                <label for="username">ชื่อผู้ใช้</label>
+                <input id="username" type="text" required>
+              </div>
+
+              <div class="form-group">
+                <label for="fullname">ชื่อ - นามสกุล</label>
+                <input id="fullname" type="text" required>
+              </div>
+
+              <div class="form-group">
+                <label for="email">อีเมล</label>
+                <input id="email" type="email" required>
+              </div>
+
+              <!-- ช่องรหัสผ่านพร้อมปุ่มตา -->
+              <div class="form-group">
+                <label for="password">รหัสผ่าน</label>
+                <input id="password" type="password" required>
+                <button type="button" class="password-toggle" onclick="togglePassword('password', this)">👁</button>
+              </div>
+
+              <div class="form-group">
+                <label for="confirm-password">ยืนยันรหัสผ่าน</label>
+                <input id="confirm-password" type="password" required>
+                <button type="button" class="password-toggle" onclick="togglePassword('confirm-password', this)">👁</button>
+              </div>
+
+              <button type="submit" class="btn-primary">สมัครสมาชิก</button>
+            </form>
+          </div>
+
+          <div class="divider vertical">
+            <span>หรือสมัครสมาชิกด้วย</span>
+          </div>
+
+          <div class="form-column">
+            <div class="social-buttons">
+              <button class="btn-social facebook">
+                <img src="https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-09-05/9FW0g43uRp.png" alt="Facebook">
+                เข้าสู่ระบบด้วย Facebook
+              </button>
+
+              <button class="btn-social google">
+                <img src="https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-09-05/soi5zQJ9Xw.png" alt="Google">
+                เข้าสู่ระบบด้วย Google
+              </button>
+            </div>
+
+            <div class="auth-links">
+              <p>เป็นสมาชิกอยู่แล้ว ?
+                <a href="#" onclick="showPage('login')">เข้าสู่ระบบ</a>
+              </p>
+              <p><a href="#">ลืมรหัสผ่าน ?</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Success Modal -->
+  <div id="success-modal" class="modal">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeModal()">&times;</button>
+      <div class="success-icon">
+        <svg width="94" height="94" viewBox="0 0 94 94" fill="none">
+          <path d="M33 47L42 56L61 37" stroke="#43A047" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="47" cy="47" r="45" stroke="#43A047" stroke-width="4"/>
+        </svg>
+      </div>
+      <h3 id="modal-title">สมัครสมาชิกสำเร็จ !</h3>
+      <button class="btn-primary" onclick="closeModal()">เข้าสู่ระบบ</button>
+    </div>
+  </div>
+
+  <!-- Toggle password script -->
+  <script>
+    function togglePassword(id, btn) {
+      const input = document.getElementById(id);
+      if (input.type === 'password') {
+        input.type = 'text';
+        btn.textContent = '🙈';   // ตาหลับ
+      } else {
+        input.type = 'password';
+        btn.textContent = '👁';   // ตาเปิด
+      }
+    }
+  </script>
+
+  <script src="signup.js"></script>
+</body>
+</html>
