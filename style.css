@@ -2,46 +2,129 @@ body {
   background-color: #f8f9fa;
 }
 
+/* ตัวแถบ */
 .navbar-custom {
-  background-color: #2a5d92;
-  padding: 10px;
+  background-color: #3b7197 ;
+  padding: 70px;                 /* ควบคุมความสูงของแถบ */
   color: white;
   border-radius: 0 0 15px 15px;
+  display: flex;
+   justify-content: space-between; /* แบ่งซ้าย-ขวา */
+  align-items: center;            /* จัดแนวกลาง */
 }
 
+/* กล่องโลโก้+ข้อความ */
+.navbar-custom .d-flex.align-items-center {
+  position: relative;
+  top: -50px;  /* เลื่อนเฉพาะโลโก้กับข้อความ */
+}
+
+/* สมัคร เข้าสู่ */
+.navbar-custom .btn-box  {
+  position: relative;
+  top: -80px; /* เลื่อนขึ้น */
+  margin-right: 10px;
+}
+
+/* สมัคร เข้าสู่ ขนาดปุ่ม */
+.navbar-custom .btn-box .btn {
+  width: 120px;         /* ให้ปุ่มกว้างเท่ากัน */
+  border-radius: 8px;
+  padding: 8px 0;       /* ปรับความสูง */
+  font-weight: 500;     /* ทำให้ตัวอักษรดูชัด */
+  text-align: center;   /* จัดข้อความให้อยู่กึ่งกลาง */
+}
+
+/* สมัคร + เข้าสู่ สีเดียวกัน */
+.btn-signup,
+.btn-login {
+  background: #194463;
+  color: #fff;
+  
+  
+}
+
+/* สีตอนกด hover */
+.btn-signup:hover,
+.btn-login:hover {
+  background: #ffffff;
+  color: #000000;
+}
+
+/* แบบฟอร์ม */
+.nav-tabs {
+  justify-content: center;
+  border-bottom: none; /* เอาเส้นใต้ของ nav-tabs ออก */
+  margin-top: -50px; /* ขยับขึ้น */
+}
+
+/*่ที่เเสดง*/
+.nav-tabs .nav-link {
+  font-size: 1.3rem;
+  border-radius: 25px;    /* มุมโค้งมน */
+  margin: 0 150px;          /* ระยะห่างระหว่างปุ่ม */
+  transition: all 0.3s ease;
+  border: 2px solid #232222; /* กรอบ */
+  background-color: #ffffff; 
+  color: #000000;           
+  /*padding: 8px 60px;  */
+   min-width: 340px; /* ความยาวขั้นต่ำของปุ่ม */
+  text-align: center; /* จัดข้อความกลาง */ 
+}
+
+/* Hover */
+.nav-tabs .nav-link:hover {
+  background-color: #194463 ; 
+  color: #ffffff;               
+}
+
+/* Active (ปุ่มที่เลือกอยู่) */
 .nav-tabs .nav-link.active {
-  background-color: #e9ecef;
-  font-weight: bold;
+  background-color: #194463;  /* ยังเป็นพื้นขาว */
+  color: #ffffff;             /* ตัวอักษรดำ */
+  font-weight: bold;       /* ตัวหนา */
+  border: 2px solid #232323;  /* กรอบดำ */
 }
 
+
+/* กรอบของหาย (การ์ด) */
 .card {
-  border-radius: 15px;
+  border-radius: 13px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
+
+/* กรอบติดต่อ */
 .contact-box {
   margin-top: 20px;
   padding: 15px;
-  background: #fff;
-  border-radius: 15px;
-  box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
+  background: #ffffff;
+  border-radius: 15px; /* มุมโค้งมน */
+
 }
+
 .contact-box:hover {
   transform: translateY(-3px);
   box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
 }
 
+
+/* ปุ่มทั่วไป */
 .btn-custom {
-  background-color: #2a5d92;
+  border-radius: 5px;  /* มุมโค้งมนเล็กลง */
+  padding: 6px 20px;   /* ปรับขนาดปุ่มเล็กลง */
+  font-size: 1.2rem;   /* ตัวอักษรเล็กลง */
+  background-color: #194463;
   color: white;
-  border-radius: 10px;
+  border-radius: 20px;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
+
 .btn-custom:hover {
   background-color: #1d466e;
   transform: scale(1.05);
