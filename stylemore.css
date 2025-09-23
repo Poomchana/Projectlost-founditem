@@ -1,0 +1,132 @@
+body {
+  background-color: #f8f9fa;
+}
+
+/* ตัวแถบ */
+.navbar-custom {
+  background-color: #3b7197;
+  padding: 15px;                 /* ควบคุมความสูงของแถบ */
+  color: white;
+  display: flex;
+  justify-content: space-between; /* แบ่งซ้าย-ขวา */
+  align-items: center;            /* จัดแนวกลาง */
+}
+
+/* กล่องโลโก้+ข้อความ */
+.navbar-custom .d-flex.align-items-center {
+  position: relative;
+  top: 5px;  /* เลื่อนเฉพาะโลโก้กับข้อความ */
+}
+
+/* กล่องชื่อ แจ้งเตือน */
+.user-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;           /* ระยะห่างระหว่างกระดิ่งกับกล่องชื่อ */
+  margin-top: -30px;
+}
+
+.notify-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.notify-btn img {
+  width: 40px;         /* ขนาดไอคอนกระดิ่ง */
+  height: 40px;
+}
+
+.user-box {
+  padding: 6px 14px;
+  background: #fff;
+  border: 2px solid #000;
+  border-radius: 20px;  /* มุมโค้งวงรี */
+  font-size: 14px;
+  color: #333;
+  font-weight: 500;
+}
+
+/* กล่องค้นหา */
+.search-box {
+  display: flex;
+  margin-left: auto; 
+  width: 500px;
+  height: 50px;   
+  border: 3px solid #194463;
+}
+
+/* ช่องพิมพ์ข้อความ */
+.search-box input[type="text"] {
+  flex: 1;
+  padding: 12px 15px;
+  font-size: 16px;
+}
+
+/* ปุ่มกดค้นหา */
+.search-box button {
+  background: #194463;
+  border: none;
+  width: 60px;
+  cursor: pointer;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+}
+
+.search-box button img {
+  width: 24px;
+  height: 24px;
+}
+
+/* กรอบของหาย (การ์ด) */
+.card {
+  border-radius: 13px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* กรอบติดต่อ */
+.contact-box {
+  margin-top: 20px;
+  padding: 15px;
+  background: #ffffff;
+  border-radius: 15px; /* มุมโค้งมน */
+}
+.contact-box:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
+}
+
+/* ปุ่มทั่วไป */
+.btn-custom {
+  border-radius: 5px;
+  padding: 6px 20px;
+  font-size: 1.2rem;
+  background-color: #194463;
+  color: white;
+  border-radius: 20px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.btn-custom:hover {
+  background-color: #1d466e;
+  transform: scale(1.05);
+}
+
+/* ปุ่มกลับหน้าหลัก (สีแดง) */
+.back-home-btn {
+  display: inline-block;
+  padding: 6px 10px;
+  background-color: #d9534f; /* สีแดง */
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.back-home-btn:hover {
+  background-color: #c9302c;
+}
