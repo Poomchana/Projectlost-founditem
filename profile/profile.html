@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>โปรไฟล์ผู้ใช้</title>
+  <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+
+  <!-- ส่วนหัว -->
+  <header class="header-bar">
+    <div class="logo-section">
+      <img src="images/logo.PNG" alt="Lost & Found" class="logo-img">
+      <h1>ของหายได้คืน</h1>
+    </div>
+  </header>
+
+  <!-- ปุ่มกลับหน้าหลัก -->
+  <button class="back-btn" onclick="goHome()">⬅ กลับหน้าหลัก</button>
+
+  <!-- ปุ่มแก้ไข -->
+  <button class="edit-btn" id="editBtn" onclick="toggleEdit()">แก้ไขโปรไฟล์</button>
+
+  <!-- เนื้อหาโปรไฟล์ -->
+  <main class="profile-container">
+
+    <!-- รูปโปรไฟล์ -->
+    <div class="photo-section">
+      <div class="photo-placeholder" id="photoPreview"></div>
+      <label class="upload-btn">
+        เปลี่ยนรูปภาพ
+        <input type="file" id="photoInput" accept="image/*" onchange="previewPhoto(event)">
+      </label>
+    </div>
+
+    <!-- ฟอร์มข้อมูลผู้ใช้ -->
+    <form class="info-section" id="profileForm">
+      <label>ชื่อผู้ใช้</label>
+      <input type="text" value="user001" disabled>
+
+      <label>ชื่อ-นามสกุล</label>
+      <input type="text" value="ธนพร พิศมัย" disabled>
+
+      <label>อีเมล</label>
+      <input type="email" value="example@email.com" disabled>
+
+      <label>เบอร์โทร</label>
+      <input type="tel" value="0924013783" disabled>
+
+      <label>วัน/เดือน/ปีเกิด</label>
+      <input type="date" value="2003-04-12" disabled>
+    </form>
+  </main>
+
+  <!-- ปุ่มออกจากระบบ -->
+  <div class="logout-section">
+    <button class="logout-btn" onclick="logout()">ออกจากระบบ</button>
+  </div>
+
+  <script src="profile.js"></script>
+</body>
+</html>
