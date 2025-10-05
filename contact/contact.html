@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>ของหายได้คืน</title>
+  <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+  <!-- ส่วนหัว -->
+  <header class="header-bar">
+    <div class="logo-section">
+      <img src="images/logo.png" alt="Lost & Found" class="logo-img">
+      <h1>ของหายได้คืน</h1>
+    </div>
+  </header>
+
+  <!-- ปุ่มกลับหน้าหลัก -->
+  <button class="back-btn" onclick="goHome()">⬅ กลับหน้าหลัก</button>
+
+  <!-- เนื้อหาหลัก -->
+  <main class="container">
+
+    <!-- Line -->
+    <div class="contact-row">
+      <div class="icon-section">
+        <p>Line</p>
+        <img src="images/line.png" alt="Line" class="icon">
+      </div>
+      <button class="btn line-btn" onclick="openLink('https://line.me/ti/p/~lostandfound')">
+        @lostandfound
+      </button>
+    </div>
+
+    <!-- Facebook -->
+    <div class="contact-row">
+      <div class="icon-section">
+        <p>facebook</p>
+        <img src="images/facebook.png" alt="Facebook" class="icon">
+      </div>
+      <button class="btn fb-btn" onclick="openLink('https://facebook.com/LostandFound')">
+        LostandFound
+      </button>
+    </div>
+
+    <!-- โทรศัพท์ -->
+    <div class="contact-row">
+      <div class="icon-section">
+        <p>Tel</p>
+        <img src="images/phone.png" alt="Phone" class="icon">
+      </div>
+      <button class="btn tel-btn" onclick="openLink('tel:0924013783')">
+        0924013783
+      </button>
+    </div>
+
+  </main>
+
+  <script src="contact.js"></script>
+</body>
+</html>
