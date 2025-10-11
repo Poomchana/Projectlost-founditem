@@ -1,0 +1,80 @@
+/* Reset พื้นฐาน */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  background-color: #f5f5f5;
+}
+
+/* แถบหัวเว็บ */
+.header-bar {
+  background-color: #3b7197;
+  color: #fff;
+  padding: 20px;
+  text-align: left;
+}
+
+/* ปุ่มกลับและปุ่มเสร็จสิ้น */
+.button-row {
+  display: flex;
+  justify-content: space-between;
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 0 10px;
+}
+
+.btn {
+  padding: 8px 20px;
+  border: none;
+  border-radius: 20px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn.back {
+  background-color: #c82333;
+}
+.btn.back:hover {
+  background-color: #a71d2a;
+}
+
+.btn.finish {
+  background-color: #28a745;
+}
+.btn.finish:hover {
+  background-color: #1f7e34;
+}
+
+/* ตาราง */
+.table-container {
+  max-width: 900px;
+  margin: 0 auto 40px;
+  background: #fff;
+  padding: 15px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.1);
+  overflow-x: auto;
+}
+
+.detail-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.detail-table th,
+.detail-table td {
+  border: 1px solid #000;
+  padding: 12px;
+  vertical-align: top;
+}
+
+.detail-table th {
+  background-color: #e9ecef;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .btn { font-size: 14px; padding: 6px 15px; }
+  .detail-table th, .detail-table td { font-size: 14px; }
+}
