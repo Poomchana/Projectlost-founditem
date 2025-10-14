@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>Lost & Found</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <!-- เรียกใช้ CSS ของเราเอง -->
+  <link rel="stylesheet" href="stylemore.css">
+</head>
+<body>
+
+<!-- โลโก้และเมนู -->
+<div class="navbar-custom d-flex justify-content-between align-items-center">
+  
+  <!-- โลโก้ + ข้อความ -->
+  <div class="d-flex align-items-center">
+    <img src="pictures/logo.png" width="70" class="me-2" alt="Logo">
+    <h2 class="mb-0">Lost & Found</h2>
+  </div>
+
+    <div class="d-flex align-items-center ">
+    <div class="user-section">
+      <button class="notify-btn">
+        <img src="pictures/icon1.png" alt="แจ้งเตือน">
+      </button>
+      <div class="user-box">ชื่อผู้ใช้ (username)</div>
+    </div>
+   </div>
+</div>
+
+  <div class="container mt-4">
+
+
+    <!-- หัวข้อ -->
+    <h3 class="fw-bold mb-3">ของหายทั้งหมด</h3>
+
+  <div class="container mt-5"></div>
+
+    <!-- ค้นหา-->
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="พิมพ์คำค้นที่นี่...">
+    <button id="searchBtn">
+      <img src="pictures/icon.png" alt="Search">
+    </button>
+  </div>
+  
+  <div class="container mt-4"></div>
+
+    <!-- โชว์ของที่หาย -->
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <div class="card p-3 shadow-sm d-flex">
+          <p><b>สิ่งของที่พบ:</b> หูฟัง </p>
+          <p><b>รายละเอียดสิ่งของ:</b> หูฟังสายสีขาว</p>
+          <p><b>สถานที่พบ:</b> โรงอาหาร</p>
+          <p><b>วัน/เวลาที่พบ:</b> 01/03/2568</p>
+          <button class="btn btn-custom ms-auto" onclick="contact()">ติดต่อ</button> <!--onclick="contact()" เวลากดปุ่ม จะเรียกใช้ฟังก์ชัน contact() ที่เขียนไว้ใน JavaScript-->
+        </div>
+      </div>
+
+      <div class="col-md-6 mb-3">
+        <div class="card p-3 shadow-sm d-flex">
+          <p><b>สิ่งของที่พบ:</b> กระเป๋าเงิน</p>
+          <p><b>รายละเอียดสิ่งของ:</b> กระเป๋าเงินสีทอง</p>
+          <p><b>สถานที่พบ:</b> หน้าสโมสรคณะฯ</p>
+          <p><b>วัน/เวลาที่พบ:</b> 31/12/2568</p>
+          <button class="btn btn-custom ms-auto" onclick="contact()">ติดต่อ</button>
+        </div>
+      </div>
+
+      <div class="col-md-6 mb-3">
+        <div class="card p-3 shadow-sm d-flex">
+          <p><b>สิ่งของที่พบ:</b> โทรศัพท์</p>
+          <p><b>รายละเอียดสิ่งของ:</b> โทรศัพท์มือถือ iPhone</p>
+          <p><b>สถานที่พบ:</b> โรงอาหาร</p>
+          <p><b>วัน/เวลาที่พบ:</b> 12/12/2568</p>
+          <button class="btn btn-custom ms-auto" onclick="contact()">ติดต่อ</button>
+        </div>
+      </div>
+
+      <div class="col-md-6 mb-3">
+        <div class="card p-3 shadow-sm d-flex">
+          <p><b>สิ่งของที่พบ:</b> ปากกา iPad</p>
+          <p><b>รายละเอียดสิ่งของ:</b> ปากกา iPad type-C</p>
+          <p><b>สถานที่พบ:</b> โรงอาหาร</p>
+          <p><b>วัน/เวลาที่พบ:</b> 12/12/2568</p>
+          <button class="btn btn-custom ms-auto" onclick="contact()">ติดต่อ</button>
+        </div>
+      </div>
+    </div>
+
+  
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <div class="card p-3 shadow-sm d-flex">
+          <p><b>สิ่งของที่พบ:</b> กุญแจหอ </p>
+          <p><b>รายละเอียดสิ่งของ:</b> พวงกูญแจสีขาว </p>
+          <p><b>สถานที่พบ:</b> ตึกพระเทพ </p>
+          <p><b>วัน/เวลาที่พบ:</b> 05/04/2568</p>
+          <button class="btn btn-custom ms-auto" onclick="contact()">ติดต่อ</button> <!--onclick="contact()" เวลากดปุ่ม จะเรียกใช้ฟังก์ชัน contact() ที่เขียนไว้ใน JavaScript-->
+        </div>
+      </div>
+
+      <div class="col-md-6 mb-3">
+        <div class="card p-3 shadow-sm d-flex">
+          <p><b>สิ่งของที่พบ:</b> เสื้อแขนยาว </p>
+          <p><b>รายละเอียดสิ่งของ:</b> สีดำ </p>
+          <p><b>สถานที่พบ:</b> โรงอาหารวิทยา </p>
+          <p><b>วัน/เวลาที่พบ:</b> 08/12/2568</p>
+          <button class="btn btn-custom ms-auto" onclick="contact()">ติดต่อ</button>
+        </div>
+      </div>
+
+      <div class="col-md-6 mb-3">
+        <div class="card p-3 shadow-sm d-flex">
+          <p><b>สิ่งของที่พบ:</b> iPad  </p>
+          <p><b>รายละเอียดสิ่งของ:</b> ipad pro m3 เคสสีชมพู</p>
+          <p><b>สถานที่พบ:</b> โรงอาหารครุศาสตร์</p>
+          <p><b>วัน/เวลาที่พบ:</b> 12/04/2568</p>
+          <button class="btn btn-custom ms-auto" onclick="contact()">ติดต่อ</button>
+        </div>
+      </div>
+
+      <div class="col-md-6 mb-3">
+        <div class="card p-3 shadow-sm d-flex">
+          <p><b>สิ่งของที่พบ:</b>สายชาร์จ</p>
+          <p><b>รายละเอียดสิ่งของ:</b> สีขาวของ iPhone </p>
+          <p><b>สถานที่พบ:</b> ห้องเพลิน </p>
+          <p><b>วัน/เวลาที่พบ:</b> 12/01/2568</p>
+          <button class="btn btn-custom ms-auto" onclick="contact()">ติดต่อ</button>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <div class="card p-3 shadow-sm d-flex">
+          <p><b>สิ่งของที่พบ:</b> แก้วน้ำ  </p>
+          <p><b>รายละเอียดสิ่งของ:</b> แก้วน้ำ  ลายohana </p>
+          <p><b>สถานที่พบ:</b> โรงอาหารครุศาสตร์</p>
+          <p><b>วัน/เวลาที่พบ:</b> 04/03/2568</p>
+          <button class="btn btn-custom ms-auto" onclick="contact()">ติดต่อ</button> <!--onclick="contact()" เวลากดปุ่ม จะเรียกใช้ฟังก์ชัน contact() ที่เขียนไว้ใน JavaScript-->
+        </div>
+      </div>
+
+      <div class="col-md-6 mb-3">
+        <div class="card p-3 shadow-sm d-flex">
+          <p><b>สิ่งของที่พบ:</b>กระเป๋าโน๊ตบุ๊ค</p>
+          <p><b>รายละเอียดสิ่งของ:</b> กระเป๋าสีดำ </p>
+          <p><b>สถานที่พบ:</b> หน้าสโมสรคณะฯ</p>
+          <p><b>วัน/เวลาที่พบ:</b> 02/12/2568</p>
+          <button class="btn btn-custom ms-auto" onclick="contact()">ติดต่อ</button>
+        </div>
+      </div>
+
+      <div class="col-md-6 mb-3">
+        <div class="card p-3 shadow-sm d-flex">
+          <p><b>สิ่งของที่พบ:</b>กุญแจรถมอเตอร์ไซค์</p>
+          <p><b>รายละเอียดสิ่งของ:</b> พวงกุญแจตุ๊กตาหมีสีชมพู</p>
+          <p><b>สถานที่พบ:</b> โรงอาหารวิทยา</p>
+          <p><b>วัน/เวลาที่พบ:</b> 02/03/2568</p>
+          <button class="btn btn-custom ms-auto" onclick="contact()">ติดต่อ</button>
+        </div>
+      </div>
+
+      <div class="col-md-6 mb-3">
+        <div class="card p-3 shadow-sm d-flex">
+          <p><b>สิ่งของที่พบ:</b>ลิป dior</p>
+          <p><b>รายละเอียดสิ่งของ:</b> รุ่น Dior Addict Lip Glow</p>
+          <p><b>สถานที่พบ:</b> หน้าสโมสรคณะฯ</p>
+          <p><b>วัน/เวลาที่พบ:</b> 12/12/2568</p>
+          <button class="btn btn-custom ms-auto" onclick="contact()">ติดต่อ</button>
+        </div>
+      </div>
+    </div>
+    <!-- โชว์ของที่หายจบ -->
+
+     <!-- ปุ่มกลับหน้าหลัก (สีแดง) -->
+  <p class="text-end">
+    <a href="index.html" class="back-home-btn"> ← กลับหน้าหลัก</a>
+  </p>
+
+
+    
+    <div class="container mt-5"></div>
+
+    <!-- ช่องทางการติดต่อ -->
+    <div class="contact-box">
+      <h6>ช่องทางการติดต่อ</h6>
+      <p>
+        Facebook: *** <br>
+        Instagram: *** <br>
+        Line: *** <br>
+        เบอร์โทร: 0X-XXX-XXXX
+      </p>
+    </div>
+  </div>
+
+  <!-- เรียกใช้ JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
