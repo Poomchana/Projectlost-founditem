@@ -129,42 +129,102 @@ body {
   transform: translateY(-2px);
 }
 
-/* ===== Modal ===== */
+/* ===== พื้นหลังโปร่งแสงของ Modal ===== */
 .modal {
-  display: none; /* ซ่อนก่อน */
+  display: none; /* ซ่อนตอนเริ่มต้น */
   position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.4);
   z-index: 999;
-}
-.modal-content {
-  background: #fff;
-  max-width: 350px;
-  margin: 10% auto;
-  padding: 30px;
-  border-radius: 12px;
-  text-align: center;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
-  position: relative;
-}
-.modal-close {
-  position: absolute;
-  top: 15px;
-  right: 18px;
-  font-size: 24px;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-.success-icon {
-  margin: 15px 0;
-}
-.modal-content h3 {
-  font-size: 18px;
-  margin: 12px 0 20px;
-}
-.modal-content .btn-primary {
-  width: 70%;
-  margin: 0 auto;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
+  justify-content: center;
+  align-items: center;
 }
 
+/* ===== กล่องเนื้อหาใน Modal ===== */
+.modal-content {
+  position: relative;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 40px 60px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  animation: fadeInUp 0.35s ease;
+}
+
+/* ===== ปุ่มปิด (x) มุมขวาบน ===== */
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 18px;
+  font-size: 28px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: #888;
+  transition: color 0.2s ease;
+}
+.modal-close:hover {
+  color: #333;
+}
+
+/* ===== ไอคอนสำเร็จ ===== */
+.success-icon {
+  margin-bottom: 20px;
+  animation: popIn 0.6s ease;
+}
+
+/* ===== จัดข้อความและปุ่มในบรรทัดเดียว ===== */
+.modal-footer-inline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;              /* ระยะห่างระหว่างข้อความกับปุ่ม */
+  margin-top: 15px;
+}
+
+/* ===== ข้อความ ===== */
+.modal-footer-inline h3 {
+  font-size: 20px;
+  color: #2e7d32;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* ===== ปุ่มกลับสู่หน้าหลัก ===== */
+.btn-primary {
+  background-color: #194463;
+  color: white;
+  border: none;
+  padding: 8px 22px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: background 0.25s ease, transform 0.1s ease;
+}
+.btn-primary:hover {
+  background-color: #133650;
+  transform: scale(1.05);
+}
+
+/* ===== Animation ===== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes popIn {
+  0% { transform: scale(0.5); opacity: 0; }
+  80% { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(1); }
+}
